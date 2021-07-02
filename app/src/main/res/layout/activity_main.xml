@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:weightSum="6"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:background="@drawable/racevnbg2">
+        <TextView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="100"
+            android:id="@+id/diemcuoc"
+            android:textColor="#C53D12"
+            android:textSize="30sp"
+            android:textStyle="bold"/>
+        <ImageButton
+            android:background="@null"
+            android:id="@+id/playgame"
+            android:layout_below="@+id/diemcuoc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/iconplay"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:background="@drawable/duongduabackgroung"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4">
+        <CheckBox
+            android:id="@+id/chkwalker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="20dp"/>
+
+        <CheckBox
+            android:id="@+id/chkbike"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/chkwalker"
+            android:layout_marginBottom="20dp"/>
+
+        <CheckBox
+            android:id="@+id/chkcar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/chkbike"
+            android:layout_marginBottom="20dp"/>
+
+        <SeekBar
+            android:progressDrawable="@android:color/transparent"
+            android:id="@+id/seekbarwalker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@+id/chkwalker"
+            android:thumb="@drawable/dibometqua"
+            android:layout_marginBottom="20dp"/>
+
+        <SeekBar
+            android:progressDrawable="@android:color/transparent"
+            android:id="@+id/seekbarbike"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/seekbarwalker"
+            android:layout_toRightOf="@+id/chkbike"
+            android:thumb="@drawable/xemay"
+            android:layout_marginBottom="20dp"/>
+
+        <SeekBar
+            android:progressDrawable="@android:color/transparent"
+            android:id="@+id/seekbarcar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/seekbarbike"
+            android:layout_toRightOf="@+id/chkcar"
+            android:fadeScrollbars="?android:attr/windowOverscan"
+            android:thumb="@drawable/xelimousine"
+            android:layout_marginBottom="20dp"
+            />
+
+
+    </RelativeLayout>
+</LinearLayout>
